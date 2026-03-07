@@ -13,9 +13,8 @@
         href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../GenCourse2/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../../Original/Original.css">
-
 
 </head>
 
@@ -70,80 +69,79 @@
                         <span>Login</span>
                     </a>
                 <?php endif; ?>
+            </ul>
         </nav>
     </header>
 
-    <!-- Navigation bar-->
-    <nav class="nav-bar">
-        <a href="../Gened1/index.php" class="nav-btn">วิชา GenEd</a>
-        <a href="../GenCourse2/index.php" class="nav-btn">รายวิชาศึกษาทั่วไป</a>
-        <a href="../hyflex3/index.php" class="nav-btn active">Hyflex Learning</a>
-    </nav> 
-
-    <section class="top-section">
-        <div class="top-image">
-            <img src="image/hy.jpg" alt="">
+    <section class="academics-section">
+        <div class="academics-header">
+            <h2>Academics</h2>
         </div>
 
-        <div class="top-text">
+        <div class="academics-container">
 
-            <p>
-                วิชาที่คุณเลือกเวลาเรียนได้ ให้อิสระแก่ผู้เรียน ได้เรียนและศึกษาด้วยตนเอง
-            </p>
-            <p>Hyflex Learning : การเรียนรู้แบบยืดหยุ่น การเรียนรู้ทั้งในชั้นเรียนที่มีผู้สอน และศึกษาด้วยตนเอง
-                ผ่านการเรียนรู้ในรูปแบบออน์ไลน์ การเรียนกับเพื่อน หรือการทำชิ้นงานโดยผู้เรียนนั้นสามารถเลือกวัน เวลา
-                ในการเรียนตลอดจนวางแผนการเรียนรู้ดังนั้นการเรียนรู้รูปแบบนี้จึงเป็นการเพิ่มโอกาสทางการศึกษาและส่งเสริมให้ผู้เรียนมีทักษะแสวงหาความรู้ด้วยตนเอง
-                ใฝ่รู้และพัฒนาตนเองต่อเนื่องตลอดชีวิต</p>
+            <div class="program-card">
+
+                <div class="card-top-bar">
+                    <div class="mac-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                    </div>
+                    <h3>Bachelor of Engineering Program in Computer Engineering and IoT</h3>
+                </div>
+
+                <div class="card-body">
+                    <p><strong>"จาก ปวส. สู่ วิศวกรเต็มตัว ทันสมัยที่สุดด้วย AI, IoT และ Digital
+                            Technology"</strong><br>
+                        หลักสูตรนี้ออกแบบมาเพื่อ Upgrade ผู้สำเร็จการศึกษาระดับประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.)
+                        ให้ก้าวสู่การเป็นวิศวกร...</p>
+
+                    <p><strong>ชื่อปริญญาและสาขาวิชา</strong><br>
+                        ชื่อเต็ม<br>
+                        • ภาษาไทย: วิศวกรรมศาสตรบัณฑิต สาขาวิศวกรรมคอมพิวเตอร์และไอโอที<br>
+                        • ภาษาอังกฤษ: Bachelor of Engineering Program in Computer Engineering and IoT</p>
+
+                    <img src="img/LINE_ALBUM_รูปกิจ_260223_4.jpg" alt="บรรยากาศการเรียน" class="program-img">
+
+                    <div class="accordion-wrapper">
+                        <button class="accordion-btn" onclick="toggleAccordion(this)">
+                            <div class="btn-left">
+                                <i class="fa-regular fa-file"></i>
+                                <span>หลักสูตรต่อเนื่อง</span>
+                            </div>
+
+                            <div class="btn-right">
+                                <i class="arrow-down"></i>
+                            </div>
+                        </button>
+                        
+                        <div class="accordion-panel">
+                            <div class="panel-content">
+                                <h4>ค่าธรรมเนียมการศึกษา</h4>
+                                <h2>35,000</h2>
+                                <p>บาท/ภาคการศึกษา</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
-    </section>
-
-    <section class="card-section">
-
-        <a href="jp.php" class="card">
-            <img src="image/jp.jpg">
-            <h3>90644069</h3>
-            <h4>ภาษาญี่ปุ่นพื้นฐาน</h4>
-            <p>Foundation Japanese</p>
-
-        </a>
-
-
-        <a href="fun.php" class="card">
-            <img src="image/hyfuncod.jpg">
-            <h3>90642111 / 96642111</h3>
-            <h4>สนุกกับการเขียนโค้ด</h4>
-            <p>Fun with Coding</p>
-        </a>
-
-        <a href="py.php" class="card">
-            <img src="image/hyPython.jpg">
-            <h3>90642211 / 96642211</h3>
-            <h4>เขียนโค้ดด้วยไพทอน</h4>
-            <p>Coding with Pythonh</p>
-        </a>
-
-        <a href="inlove.php" class="card">
-            <img src="image/Hyinlove.jpg">
-            <h3>90642888</h3>
-            <h4>อินเลิฟ อินไลฟ์</h4>
-            <p>In Love & In Life</p>
-        </a>
-
-        <a href="era.php" class="card">
-            <img src="image/Hyera.jpg">
-            <h3>90643888</h3>
-            <h4>การเงินและการลงทุนในยุคดิจิทัล</h4>
-            <p>Digital Era Finance and Investment</p>
-        </a>
-
-        <a href="present.php" class="card">
-            <img src="image/Hypro.jpg">
-            <h3>90644888</h3>
-            <h4>พรีเซ้นต์อย่างไร ให้โดนใจผู้ฟัง</h4>
-            <p>Present Like A Pro</p>
-        </a>
 
     </section>
+
+     <section class="curriculum-section">
+
+        <div class="curriculum-wrapper">
+            <div class="curriculum-tab align-right">
+                <h3>หลักสูตรวิศวกรรมคอมพิวเตอร์และไอโอที (ต่อเนื่อง)</h3>
+            </div>
+            <div class="curriculum-frame">
+                <img src="img/overall.jpg" alt="ตารางแผนการเรียน 2 ปริญญา" class="curriculum-img">
+            </div>
+        </div>
+
+    </section>  
 
     <footer>
         <div class="container">
@@ -152,9 +150,9 @@
                     <img src="../../Original/IoTeKMITL.png" alt="IoTE Logo">
                 </div>
                 <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-line"></i></a>
+                    <a href="../../Contact/index.php"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="../../Contact/index.php"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="../../Contact/index.php"><i class="fa-brands fa-line"></i></a>
                 </div>
             </div>
             <hr class="footer-line">
@@ -184,8 +182,9 @@
             </div>
         </div>
     </footer>
-    <script src="../General_Education_Course 2/script.js"></script>
 
+    <script src="script.js"></script>
+    <script src="../../Original/Original.js"></script>
 </body>
 
 </html>

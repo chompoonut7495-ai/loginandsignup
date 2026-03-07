@@ -1,0 +1,128 @@
+<?php session_start(); ?>
+
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ioTE KMITL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../Original/Original.css">
+</head>
+
+<body>
+
+    <header class="navbar" id="main-nav">
+        <div class="logo">
+            <img src="../Original/IoTeKMITL.png" alt="iGTE Logo">
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="menu-container">
+            <ul class="nav-links">
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="../About_IoT/IoT/index.php">About IoT</a></li>
+
+                <li class="dropdown">
+                    <a href="../Academics/index.php">Academics <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../Academics/IoT/index.php">IoT System and information</a></li>
+                        <li><a href="../Academics/ComIoT/index.php">Computer Engineering & IoT</a></li>
+                        <li><a href="../Academics/Gened1/index.php">Gened</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../Admission/index.php">Admission</a></li>
+                <li><a href="../Contact/index.php">Contact</a></li>
+                <li><a href="../Faculty/index.php">Faculty</a></li>
+
+                <li class="dropdown dropdown-right">
+                    <a href="../Performance/index.php" style="color:aliceblue">Performance <span
+                            class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../Performance/DCL/index.php">Definition of Cybersecurity Laboratory</a></li>
+                        <li><a href="../Performance/CLR/index.php">Cybersecurity Laboratory Researcher</a></li>
+                    </ul>
+                </li>
+                <!-- Login Button -->
+                <li class="login-box">
+
+                <?php if(isset($_SESSION['email'])): ?>
+                    <a href="../../loginandsignup/logout.php" class="login-btn">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Logout</span>
+                    </a>
+                <?php else: ?>
+                    <a href="../../loginandsignup/login.php" class="login-btn">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        <span>Login</span>
+                    </a>
+                <?php endif; ?>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="aca">
+            <h1>Performance</h1>
+            <div class="option">
+                <a href="DCL/index.php">Definition of Cybersecurity Laboratory</a>
+                <a href="CLR/index.php">Cybersecurity Laboratory Researcher</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="logo">
+                    <img src="../Original/IoTeKMITL.png" alt="IoTE Logo">
+                </div>
+                <div class="social-icons">
+                    <a href="../Contact/index.php"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="../Contact/index.php"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="../Contact/index.php"><i class="fa-brands fa-line"></i></a>
+                </div>
+            </div>
+            <hr class="footer-line">
+            <div class="footer-bottom">
+                <div class="footer-col">
+                    <h3>ABOUT US</h3>
+                    <p><strong>Bachelor of Engineering</strong><br>(IoT System and Information)</p>
+                    <br>
+                    <p><strong>Dual Degree</strong><br>(B.Eng. IoT System + B.Sc. Industrial Physics)</p>
+                </div>
+                <div class="footer-col contact-info">
+                    <h3>CONTACT US</h3>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>ชั้น 12 อาคารเรียนรวม 12 ชั้น เลขที่ 1 ซอยฉลองกรุง 1 <br>แขวงลาดกระบัง เขตลาดกระบัง
+                            กรุงเทพมหานคร 10520</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-regular fa-envelope"></i>
+                        <p>iote@kmitl.ac.th<br>pikulkaew.ta@kmitl.ac.th</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>02-329-8000 ext.5129<br>02-329-8301 ext.235</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../Original/Original.js"></script>
+</body>
+
+</html>

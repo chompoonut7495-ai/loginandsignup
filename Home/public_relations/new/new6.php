@@ -1,0 +1,57 @@
+<?php session_start(); ?>
+
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ioTE KMITL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="news-detail-page">
+        <div class="container">
+            <header class="news-header">
+                <a href="../index.php" class="back-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <h1>Huawei National ICT Competition Awards 2025-2026</h1>
+            </header>
+
+            <div class="main-image-wrapper">
+                <img src="../img/LINE_ALBUM_ประชาสัมพันธ์_260226_6.jpg" alt="Activity Image">
+            </div>
+
+            <article class="content-card">
+                <div class="card-header">
+                    <h3>รายละเอียด</h3>
+                </div>
+                <div class="card-body">
+                    <p>ขอแสดงความยินดีกับนักศึกษา ภาควิชาวิศวกรรมไอโอทีและสารสนเทศ คณะวิศวกรรมศาสตร์</p>
+                    <ul>
+                        <li>นายวิวรรธน์ สุวรรณสิทธิ์ (66010769) จากทีม M.I.T</li>
+
+                    </ul>
+                    <p>โดยมีอาจารย์ที่ปรึกษา </p>
+                    <ul>
+                        <li>ผู้ช่วยศาสตราจารย์นิจจารีย์ สัตยารักษ์</li>
+
+                    </ul>
+                    <p>ที่ได้รับรางวัล ชนะเลิศ Network Track ในงาน The Huawei National ICT Competition Awards 2025–2026
+                        วันที่ 18 ธันวาคม 2568 ณ หัวเว่ย เทคโนโลยี (ประเทศไทย) อาคาร G Tower Grand Rama9</p>
+                    <p class="thanks-msg">ขอชื่นชมความตั้งใจและศักยภาพของนักศึกษาที่ร่วมกันสร้างผลงานยอดเยี่ยม</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</body>
+
+</html>

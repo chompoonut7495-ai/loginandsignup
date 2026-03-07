@@ -1,0 +1,369 @@
+/* ================= RESET ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    margin-top:90px;
+    font-family:'Pathway Extreme',sans-serif;
+    background:#f4f6f9;
+    overflow-x:hidden;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    background-color: #1e2b40;
+    color: #ffffff;
+    text-align: center;
+    padding: 45px;
+    margin-top:-10px;
+}
+
+.header h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+
+/* ================= MAIN SECTION ================= */
+
+.main-section{
+    padding:80px 8%;
+}
+
+.card-wrapper{
+    display:flex;
+    gap:50px;
+}
+
+.login-btn{
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 15px 10px;
+    border-radius: 8px;
+}
+
+.login-btn:hover{
+    color: #fff;
+    background-color: rgba(255, 123, 0, 0.658);
+}
+
+
+/* ================= CARD ================= */
+
+.card{
+    flex:1;
+    background:#ffffff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 20px 45px rgba(0,0,0,0.08);
+    transition:0.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+
+/* ================= CARD HEADER ================= */
+
+.card-header{
+    background:#F9B151;
+    padding:40px 30px;
+    position:relative;
+    text-align:center;
+}
+
+.card-header h2{
+    font-size:22px;
+    font-weight:700;
+    line-height:1.4;
+}
+
+
+/* ================= MAC DOTS ================= */
+
+.dots{
+    position:absolute;
+    top:15px;
+    left:20px;
+    display:flex;
+    gap:8px;
+}
+
+.dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+}
+
+.red{
+    background:#ff5f56;
+}
+
+.yellow{
+    background:#ffbd2e;
+}
+
+
+/* ================= CARD CONTENT ================= */
+
+.card-content{
+    padding:35px;
+    font-size:16px;
+    line-height:1.9;
+    color:#444;
+}
+
+.content-image{
+    width:100%;
+    border-radius:14px;
+    margin-top:25px;
+}
+
+
+/* ================= TOGGLE BUTTON ================= */
+
+.toggle-btn{
+    background:#213443;
+    color:#fff;
+
+    margin:30px;
+    padding:18px 25px;
+
+    border-radius:20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    cursor:pointer;
+}
+
+.card.active .toggle-btn{
+    border-radius:20px 20px 0 0;
+}
+
+.left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.fa-regular.fa-file{
+    color:white;
+}
+
+.course-link{
+    color:#fff;
+    text-decoration:underline;
+    font-weight:600;
+}
+
+.course-link:hover{
+    opacity:0.8;
+}
+
+
+/* ================= ARROW ================= */
+
+.arrow-circle{
+
+    width:45px;
+    height:45px;
+
+    background:#F9B151;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    transition:0.3s ease;
+
+    box-shadow:0 0 15px rgba(245,166,35,0.6);
+
+}
+
+.arrow-down{
+
+    border:solid white;
+    border-width:0 3px 3px 0;
+
+    display:inline-block;
+
+    padding:4px;
+
+    transform:rotate(45deg);
+
+}
+
+/* rotate when active */
+
+.card.active .arrow-circle{
+    transform:rotate(180deg);
+}
+
+
+/* ================= TOGGLE PANEL ================= */
+
+.toggle-content{
+
+    max-height:0;
+    overflow:hidden;
+
+    background:#213443;
+
+    transition:max-height 0.5s ease;
+
+    margin:0 30px 30px 30px;
+    margin-top:-30px;
+
+    border-radius:0 0 20px 20px;
+}
+
+.gold-line{
+    height:3px;
+    background:#F9B151;
+}
+
+.fee-box{
+    padding:45px 20px;
+    text-align:center;
+    color:#ffffff;
+}
+
+.fee-box h3{
+    font-size:20px;
+    font-weight:400;
+}
+
+.price{
+    font-size:44px;
+    font-weight:800;
+    margin:15px 0;
+}
+
+.fee-box p{
+    font-size:18px;
+}
+
+
+/* ================= PROGRAM SECTION ================= */
+
+.program-section{
+    padding:100px 8%;
+}
+
+.program-wrapper{
+    margin-bottom:120px;
+}
+
+
+/* ================= PROGRAM HEADER ================= */
+
+.program-header{
+
+    position:relative;
+
+    width:50%;
+
+    padding:18px 35px;
+
+    font-weight:700;
+    font-size:22px;
+
+    border:4px solid #213443;
+    border-radius:25px;
+
+    background:#ffffff;
+}
+
+
+/* ================= ORANGE BARS ================= */
+
+.orange-bars{
+
+    position:absolute;
+
+    bottom:12px;
+    right:25px;
+
+    display:flex;
+    gap:6px;
+}
+
+.orange-bars span{
+    background:#F9B151;
+    display:block;
+    height:6px;
+}
+
+.orange-bars span:nth-child(1){width:10px;}
+.orange-bars span:nth-child(2){width:20px;}
+.orange-bars span:nth-child(3){width:30px;}
+.orange-bars span:nth-child(4){width:40px;}
+.orange-bars span:nth-child(5){width:50px;}
+.orange-bars span:nth-child(6){width:60px;}
+
+
+/* ================= IMAGE FRAME ================= */
+
+.image-container{
+
+    background-image:url('img/stripe.JPG');
+    background-size:cover;
+    background-position:center;
+
+    width:100%;
+
+    padding:50px;
+
+    border-radius:12px;
+
+}
+
+.program-img-inside{
+
+    width:100%;
+    height:auto;
+
+    display:block;
+
+    border-radius:8px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+.bottom-box .program-header{
+    margin-left:auto;
+    text-align:right;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+.card-wrapper{
+    flex-direction:column;
+}
+
+.program-header{
+    width:100%;
+    font-size:18px;
+}
+
+}

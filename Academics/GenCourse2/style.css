@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: auto; */
+}
+
+body {
+    background-color: #DDDCDC;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Pathway Extreme', sans-serif;
+    padding-top: 100px; 
+}
+
+
+/* =========================================
+   3. PAGE CONTENT (ส่วนเนื้อหาภายใน)
+   ========================================= */
+
+/* Sub-Navigation (แถบเมนูสีกรมท่าภายในหน้า) */
+.nav-bar { 
+    background: #223645;
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+}
+
+.nav-btn {
+    width: 100%;
+    background: #dddcdc;
+    color: #000000;
+    border: none;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    text-decoration: none;
+    text-align: center;
+    padding: 20px;
+    margin: 0 20px;
+}
+
+.nav-btn.active {
+    background: #f2a84c;
+}
+
+.nav-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Section Containers */
+.content-section {
+    width: 85%;
+    max-width: 1100px;
+    margin: 50px auto;
+    background: #eeeeee;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+/* Title bar with Underline */
+.section-title {
+    background: #223645;
+    color: #fff;
+    padding: 18px 25px;
+    border-radius: 15px 15px 0 0;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 200px;
+    height: 8px;
+    background: #f2a84c;
+    border-radius: 0 5px 5px 0;
+}
+
+/* =========================================
+   2. TOP SECTION (ส่วนหัวข้อพร้อมรูปภาพ)
+   ========================================= */
+.top-section {
+    width: 85%;
+    max-width: 1100px;
+    margin: 40px auto 60px auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.top-image {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 3px solid #000;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.top-image img {
+    width: 100%;
+    display: block;
+}
+
+.top-text {
+    flex: 1;
+}
+
+.top-text h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.top-text p {
+    line-height: 1.6;
+}
+
+/* =========================================
+   3. CARD SECTION (การ์ดแสดงผล)
+   ========================================= */
+.card-section {
+    width: 95%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    width: 350px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 13px;
+    color: #555;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================
+   4. DETAIL PAGE STYLES (หน้ารายละเอียด)
+   ========================================= */
+
+.page-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+/* ปุ่มย้อนกลับ */
+.fa-solid.fa-arrow-turn-up {
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    font-size: 40px;
+    text-decoration: none;
+    color: #213443;
+    font-weight: bold;
+}
+
+.page-header h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+/* กล่องเนื้อหาหลัก */
+.detail-container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto 80px auto;
+}
+
+.detail-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.detail-title {
+    background: linear-gradient(90deg, #1f3444, #0f1f2c);
+    color: #fff;
+    padding: 18px 25px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.detail-content {
+    padding: 30px;
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+/* =========================================
+   5. COMMENT SECTION (ส่วนแสดงความคิดเห็น)
+   ========================================= */
+.comment-section {
+    width: 100%;
+    max-width: 1700px;
+    margin: 60px auto 100px auto;
+    padding: 0 20px; /* เพิ่ม padding กันชิดขอบจอ */
+}
+
+.comment-list {
+    background: #cfcfcf;
+    padding: 60px;
+    border-radius: 30px;
+    height: 420px;
+    overflow-y: auto;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.comment {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #b5b5b5;
+    flex-shrink: 0; /* ป้องกันวงกลมเบี้ยว */
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.comment-header {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.comment-header .time {
+    font-weight: 400;
+    font-size: 12px;
+    margin-left: 10px;
+    color: #555;
+}
+
+/* ช่องพิมพ์คอมเมนต์ */
+.comment-input-box {
+    border-radius: 20px;
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.comment-input-box input {
+    flex: 1;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    margin: 10px;
+    background: #ffffff;
+    font-size: 15px;
+    outline: none;
+}
+
+.comment-input-box button {
+    width: 120px;
+    border: none;
+    border-radius: 20px;
+    background: #F9B151;
+    color: #213443;
+    font-size: 30px; /* ขนาด Font อาจใหญ่ไป ปรับลดได้ถ้ารูปไม่ขึ้น */
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+/* =========================================
+   6. RESPONSIVE (MEDIA QUERIES) - CONTENT ONLY
+   ========================================= */
+
+@media (max-width: 900px) {
+    /* ปรับ Top Section เป็นแนวตั้ง */
+    .top-section {
+        flex-direction: column;
+        width: 90%;
+        text-align: center;
+    }
+
+    .top-image {
+        width: 100%;
+    }
+
+    /* ปรับปุ่มย้อนกลับในหน้า Detail */
+    .fa-solid.fa-arrow-turn-up {
+        position: static; /* เลิก fix ตำแหน่ง */
+        display: inline-block;
+        transform: rotate(-90deg); /* หมุนกลับ */
+        font-size: 40px; /* ลดขนาด */
+        margin-bottom: 20px;
+        rotate: 0deg;
+    }
+    
+
+}
+
+@media (max-width: 768px) {
+    .nav-btn {
+        width: 100%; /* ให้เต็มจอในมือถือ */
+        padding: 15px 30px; /* ลดขนาดปุ่ม Nav ในหน้าเนื้อหา */
+        margin: 0;
+    }
+    
+    .nav-bar {
+        flex-direction: column; /* เรียงปุ่มแนวตั้ง */
+        padding: 20px;
+        gap: 15px;
+    }
+
+    /* ปรับการ์ดให้เต็มจอ */
+    .card-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* ปรับกล่องคอมเมนต์ */
+    .comment-list {
+        padding: 30px;
+    }
+}

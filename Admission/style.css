@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: auto; */
+}
+
+body {
+    font-family: 'Pathway Extreme', sans-serif;
+    margin-top: 90px;
+}
+/* =========================================
+   3. ADMISSION SECTION (ส่วนรับสมัคร)
+   ========================================= */
+.admission-section {
+    width: 100%;
+    margin-bottom: 50px;
+    /* เพิ่มระยะห่างด้านบนหน่อย เพราะไม่มี padding-top ที่ body แล้ว */
+    margin-top: 40px; 
+}
+
+.admission-header {
+    background-color: #FFB35C;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.admission-header h1 {
+    color: #1A2E56;
+    font-size: 36px;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.admission-container {
+    background-color: #1A2E56;
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px auto;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: stretch; /* ปรับให้สูงเท่ากัน */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.course-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.course-title {
+    text-align: center;
+    color: #1A2E56;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.course-detail-item { margin-bottom: 15px; }
+.course-detail-item h4 { color: #F9A848; font-size: 16px; margin: 0 0 5px 0; }
+.course-detail-item p { color: #1A2E56; font-size: 14px; font-weight: 600; margin: 0; }
+
+/* Admission Rounds Buttons */
+.admission-rounds {
+    flex: 1;
+    min-width: 300px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+.round-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.round-btn {
+    background-color: #fff;
+    color: #F9A848;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 155px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.round-btn i { font-size: 20px; }
+.arrow-icon { color: #fff; font-size: 24px; }
+
+.seat-count {
+    background-color: #fff;
+    color: #F9A848;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    min-width: 120px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================
+   4. PORTFOLIO / QUOTA / ADMISSION CARDS
+   ========================================= */
+.portfolio-card {
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-header {
+    background-color: #1A2E56;
+    padding: 30px;
+    text-align: left;
+    color: #fff;
+}
+
+.portfolio-header h1 {
+    margin: 0;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.header-line-center {
+    width: 100px;
+    height: 5px;
+    background-color: #F9A848;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+.portfolio-body {
+    background-color: #eaeff2;
+    padding: 40px;
+}
+
+.portfolio-body .project-item { margin-bottom: 15px; }
+
+/* Accordion Buttons */
+.project-item {
+    background-color: #F9A848;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: auto;
+    min-height: 70px;
+    border: none;
+    text-align: left;
+    outline: none;
+    /* ลบ font-family: Prompt ออก เพื่อให้ใช้ฟอนต์หลักของเว็บ */
+}
+
+.project-item:hover, .project-item.active {
+    background-color: #ff9f2a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(249, 168, 72, 0.4);
+}
+
+.circle-icon {
+    background-color: #1A2E56;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    flex-shrink: 0;
+    margin-left: 15px;
+}
+
+.circle-icon i { color: #fff; font-size: 16px; }
+
+.project-item:hover .circle-icon,
+.project-item.active .circle-icon {
+    transform: rotate(90deg);
+}
+
+.accordion-content {
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.content-inner {
+    padding: 25px;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.content-inner ul { margin-top: 5px; padding-left: 20px; }
+
+/* =========================================
+   6. RESPONSIVE (ADMISSION ONLY)
+   ========================================= */
+@media screen and (max-width: 950px) {
+    /* ปรับ Layout หน้า Admission ในมือถือ */
+    .admission-container { flex-direction: column; padding: 20px; width: 90%; }
+    .course-card, .admission-rounds { width: 100%; min-width: auto; }
+    
+    /* ปรับปุ่มกลมๆ ในมือถือ */
+    .round-row { flex-direction: row; justify-content: space-between; }
+    .round-btn, .seat-count { font-size: 14px; padding: 10px; width: auto; flex: 1; }
+    .arrow-icon { font-size: 16px; margin: 0 5px; }
+    
+    /* ปรับ Portfolio Card */
+    .portfolio-card { width: 95%; margin: 20px auto; }
+    .portfolio-body { padding: 20px; }
+    .project-item { font-size: 16px; padding: 15px 20px; }
+}

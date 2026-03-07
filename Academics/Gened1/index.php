@@ -6,17 +6,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ioTE Header</title>
+    <title>GenEd</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../GenCourse2/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../../Original/Original.css">
-
-
 </head>
 
 <body>
@@ -36,12 +34,12 @@
                 <li><a href="../../About_IoT/IoT/index.php">About IoT</a></li>
 
                 <li class="dropdown">
-                    <a href="../../Academics/index.php" style="color:aliceblue">Academics <span
+                    <a href="../Academics/index.php" style="color:aliceblue">Academics <span
                             class="arrow">▼</span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="../../Academics/IoT/index.php">IoT System and information</a></li>
-                        <li><a href="../../Academics/ComIoT/index.php">Computer Engineering & IoT</a></li>
-                        <li><a href="../../Academics/Gened1/index.php">Gened</a></li>
+                        <li><a href="../IoT/index.php">IoT System and information</a></li>
+                        <li><a href="../ComIoT/index.php">Computer Engineering & IoT</a></li>
+                        <li><a href="../Gened1/index.php">Gened</a></li>
                     </ul>
                 </li>
 
@@ -70,79 +68,65 @@
                         <span>Login</span>
                     </a>
                 <?php endif; ?>
+            </ul>
         </nav>
     </header>
 
     <!-- Navigation bar-->
     <nav class="nav-bar">
-        <a href="../Gened1/index.php" class="nav-btn">วิชา GenEd</a>
+        <a href="../Gened1/index.php" class="nav-btn active">วิชา GenEd</a>
         <a href="../GenCourse2/index.php" class="nav-btn">รายวิชาศึกษาทั่วไป</a>
-        <a href="../hyflex3/index.php" class="nav-btn active">Hyflex Learning</a>
-    </nav> 
+        <a href="../hyflex3/index.php" class="nav-btn">Hyflex Learning</a>
+    </nav>  
 
-    <section class="top-section">
-        <div class="top-image">
-            <img src="image/hy.jpg" alt="">
+    <!-- Main Content -->
+    <section class="content-section">
+
+        <div class="section-title">
+            มาทำความรู้จักกับวิชา GenEd
         </div>
 
-        <div class="top-text">
-
+        <div class="card large">
             <p>
-                วิชาที่คุณเลือกเวลาเรียนได้ ให้อิสระแก่ผู้เรียน ได้เรียนและศึกษาด้วยตนเอง
+                <strong>GenEd หรือ General Education กันก่อน วิชานี้เป็นวิชาศึกษาทั่วไป
+                    เกิดขึ้นเพื่อให้นักศึกษามีความรู้รอบตัว เสริมสร้างความรู้ในหลากหลายด้าน
+                    เพื่อนำไปใช้และต่อยอดในชีวิตประจำวัน ทางด้านศึกษาทั่วไปของเรามีทั้งหมด 5 วิชาหลัก
+                    และวิชาเสริม ๆ ที่นักศึกษาสามารถเลือกเข้าเรียนได้ตามความสนใจ</strong>
             </p>
-            <p>Hyflex Learning : การเรียนรู้แบบยืดหยุ่น การเรียนรู้ทั้งในชั้นเรียนที่มีผู้สอน และศึกษาด้วยตนเอง
-                ผ่านการเรียนรู้ในรูปแบบออน์ไลน์ การเรียนกับเพื่อน หรือการทำชิ้นงานโดยผู้เรียนนั้นสามารถเลือกวัน เวลา
-                ในการเรียนตลอดจนวางแผนการเรียนรู้ดังนั้นการเรียนรู้รูปแบบนี้จึงเป็นการเพิ่มโอกาสทางการศึกษาและส่งเสริมให้ผู้เรียนมีทักษะแสวงหาความรู้ด้วยตนเอง
-                ใฝ่รู้และพัฒนาตนเองต่อเนื่องตลอดชีวิต</p>
         </div>
+
+        <div class="card">
+            <h3><strong>ต้องลงเรียน GenEd กี่หน่วยกิต ?</strong></h3>
+            <p>
+                นักศึกษาพระจอมเกล้าฯ ต้องลงเรียนให้ครบทั้งหมด 30 หน่วยกิตด้วยกัน
+                ซึ่งมีวิชาหลักทั้งหมด 5 วิชา และวิชาเลือกอื่น ๆ รวมทั้งหมด
+                260 วิชาให้เลือกลงเรียน
+            </p>
+        </div>
+
+        <div class="card">
+            <h3><strong>ใน 30 หน่วยกิตมีอะไรบ้าง ?</strong></h3>
+            <p>
+                ใน 30 หน่วยกิตจะประกอบไปด้วยวิชาบังคับ 12 หน่วยกิต ได้แก่
+                วิชาโรงเรียนสร้างเสน่ห์ วิชาทักษะและสันทนาการ
+                วิชานวัตกรรมดิจิทัล วิชาการวิจัยพื้นฐาน 1 และ 2
+                ส่วนวิชาเลือก 18 หน่วยกิต ลงเรียนได้อิสระตามความสนใจของนักศึกษา
+            </p>
+        </div>
+
+        <div class="card center">
+            <h3><strong>วิชาหลักทั้งหมด 5 วิชา</strong></h3>
+            <p>ตัดเกรดแบบ ผ่าน (S) และไม่ผ่าน (U)</p>
+        </div>
+
+
     </section>
 
-    <section class="card-section">
-
-        <a href="jp.php" class="card">
-            <img src="image/jp.jpg">
-            <h3>90644069</h3>
-            <h4>ภาษาญี่ปุ่นพื้นฐาน</h4>
-            <p>Foundation Japanese</p>
-
-        </a>
-
-
-        <a href="fun.php" class="card">
-            <img src="image/hyfuncod.jpg">
-            <h3>90642111 / 96642111</h3>
-            <h4>สนุกกับการเขียนโค้ด</h4>
-            <p>Fun with Coding</p>
-        </a>
-
-        <a href="py.php" class="card">
-            <img src="image/hyPython.jpg">
-            <h3>90642211 / 96642211</h3>
-            <h4>เขียนโค้ดด้วยไพทอน</h4>
-            <p>Coding with Pythonh</p>
-        </a>
-
-        <a href="inlove.php" class="card">
-            <img src="image/Hyinlove.jpg">
-            <h3>90642888</h3>
-            <h4>อินเลิฟ อินไลฟ์</h4>
-            <p>In Love & In Life</p>
-        </a>
-
-        <a href="era.php" class="card">
-            <img src="image/Hyera.jpg">
-            <h3>90643888</h3>
-            <h4>การเงินและการลงทุนในยุคดิจิทัล</h4>
-            <p>Digital Era Finance and Investment</p>
-        </a>
-
-        <a href="present.php" class="card">
-            <img src="image/Hypro.jpg">
-            <h3>90644888</h3>
-            <h4>พรีเซ้นต์อย่างไร ให้โดนใจผู้ฟัง</h4>
-            <p>Present Like A Pro</p>
-        </a>
-
+    <!-- Image -->
+    <section class="image-section">
+        <div class="image-frame">
+            <img src="image/sub.jpg" alt="วิชาgened">
+        </div>
     </section>
 
     <footer>
@@ -184,8 +168,8 @@
             </div>
         </div>
     </footer>
-    <script src="../General_Education_Course 2/script.js"></script>
 
+    <script src="../../Original/Original.js"></script>
 </body>
 
 </html>

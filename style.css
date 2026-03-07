@@ -1,132 +1,716 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Prompt', sans-serif;
+/* =========================================
+   1. RESET & GLOBAL STYLES
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: auto; */
 }
 
-body{
-    height:100vh;
-    background-color:#F0A84E; /* สีส้มพื้นหลัง */
-    display:flex;
-    justify-content:center;
-    align-items:center;
+body {
+    font-family: 'Pathway Extreme', sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-top: 80px;
 }
 
-/* Container L/R */
-.container{
-    width:1200px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+main {
+    flex: 1;
 }
 
-.form-box{
-    display: none;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.form-box.active{
-    display: block;
-}
-
-/* logo */
-.left img{
-    width:400px;
-}
-
-/* right sec */
-.right{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.login-box{
-    width:400px;
-    background:#d9d9d9;
-    padding:40px;
-    border-radius:15px;
-    box-shadow:0 8px 15px rgba(0,0,0,0.2);
-}
-
-.login-box h1{
-    text-align:center;
-    font-weight:700;
-    color:#2f3e4a;
-    margin-bottom:30px;
-    position:relative;
-}
-
-.login-box h1::after{
-    content:"";
-    width:80px;
-    height:4px;
-    background:#f4a640;
-    display:block;
-    margin:10px auto 0;
-    border-radius:2px;
-}
-
-/* input */
-.input-group{
-    margin-bottom:25px;
-}
-
-.input-group label{
-    font-weight:600;
-    color:#2f3e4a;
-    display:block;
-    margin-bottom:10px;
-}
-
-.input-group input{
-    width:100%;
-    border:none;
-    border-bottom:3px solid #2f3e4a;
-    background:transparent;
-    padding:8px 0;
-    font-size:20px;
-    outline:none;
-}
-
-/* login btn */
-.login-btn{
-    width:100%;
-    padding:15px;
-    border:none;
-    border-radius:30px;
-    background:#243746;
-    color:#f4a640;
-    font-weight:700;
-    cursor:pointer;
-    margin-top:20px;
-    transition:0.3s;
-}
-
-.login-btn:hover{
-    opacity:0.85;
-}
-
-/* signup link */
-.signup-text{
-    text-align:center;
-    margin-top:15px;
-    font-size:20px;
-}
-
-.signup-text a{
-    color:#243746;
-    font-weight:600;
-    text-decoration:underline;
-}
-
-
-.error-message{
-    padding: 12px;
-    background: #f8d7da;
-    border-radius: 6px;
-    font-size: 16px;
-    color: #a42834;
+.home-demo {
     text-align: center;
+}
+
+/* =========================================
+   2. HERO BANNER SECTION (แบนเนอร์ด้านบนสุด)
+   ========================================= */
+.hero-section {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+/* --- ส่วนบน: แบนเนอร์สีแดง --- */
+.hero-top {
+    width: 100%;
+    height: 380px;
+    background-image: url('img3/LINE_ALBUM_main_260223_1.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* ลบ margin-top: 80px ออกเพื่อให้ชิดขอบบน */
+    margin-top: 0;
+}
+
+.hero-top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+/* --- ส่วนล่าง: เมนู 3 กล่อง --- */
+.hero-bottom-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 300px;
+}
+
+.feature-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+}
+
+.feature-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease;
+}
+
+.feature-box:hover::before {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.feature-label {
+    position: relative;
+    z-index: 2;
+    background-color: #1e2b40;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.feature-box:hover .feature-label {
+    transform: translateY(-8px) scale(1.05);
+    background-color: #2a3d59;
+}
+
+.feature-label i {
+    font-size: 2.2rem;
+}
+
+/* =========================================
+   3. SLIDERS (สไลด์ทั้ง 2 แบบ)
+   ========================================= */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0%;
+    overflow: hidden;
+    padding: 0%;
+    border-radius: 0%;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* แบบที่ 1: ซ้ายรูป ขวาข้อความ */
+.slide-item {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+    padding: 40px 80px;
+    gap: 40px;
+    box-sizing: border-box;
+}
+
+.slide-item img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.slide-content {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slide-content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.slide-content a {
+    color: #ffaa42;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* แบบที่ 2: รูปภาพขนาดใหญ่ตรงกลาง */
+.slider-style-2 {
+    padding: 20px 40px 60px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.slide-item-full {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-item-full img {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+}
+
+/* ปุ่มเลื่อนสไลด์ (ใช้ร่วมกัน) */
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background: rgba(255, 170, 66, 0.9);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+/* =========================================
+   4. NEWS & PR SECTION (ประชาสัมพันธ์)
+   ========================================= */
+.news-section {
+    background-color: #e2e5e5;
+    padding: 60px 0;
+}
+
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 15px;
+}
+
+.news-header h2 {
+    color: #1e2b40;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.new-header {
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 80px;
+    justify-content: space-between;
+    align-items: end;
+    flex-direction: row;
+    padding-top: 50px;
+}
+
+.new-header h2 {
+    width: max-content;
+    font-size: 2.2rem;
+    text-align: start;
+    font-weight: 600;
+
+}
+
+.new-header .view-all {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s;
+    height: max-content;
+}
+
+.new-header .view-all:hover {
+    color: #F9A848;
+}
+
+.news-header .view-all {
+    color: #1e2b40;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.news-header .view-all:hover {
+    color: #F9A848;
+}
+
+.news-divider {
+    height: 4px;
+    background-color: #d1d5db;
+    position: relative;
+    border-radius: 2px;
+}
+
+.news-divider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 100%;
+    background-color: #F9A848;
+    border-radius: 2px;
+}
+
+.new-divider {
+    height: 4px;
+    background-color: #d1d5db;
+    position: relative;
+    border-radius: 2px;
+}
+
+.new-divider::before {
+    
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: #dddcdc;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.news-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.news-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background-color: #f8f9fa;
+    border-radius: 12px;
     margin-bottom: 20px;
+}
+
+.news-card p {
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =========================================
+   5. CHATBOT WIDGET
+   ========================================= */
+.chatbot-widget-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+#chat-launcher-btn {
+    width: 60px;
+    height: 60px;
+    background-color: #f9a848;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+
+#chat-launcher-btn:hover {
+    transform: scale(1.1);
+    background-color: #ffbd66;
+}
+
+.chatbot-card {
+    width: 350px;
+    height: 500px;
+    background-color: #ffffff;
+    border: 3px solid #f9a848;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    font-family: sans-serif;
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.chatbot-card.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    animation: popUp 0.3s ease-out forwards;
+}
+
+@keyframes popUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chatbot-header {
+    background-color: #f9a848;
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1e2b40;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.close-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.chatbot-body {
+    height: 360px;
+    padding: 15px;
+    overflow-y: auto;
+    background: #ffffff;
+    box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.1),
+        inset 0 -10px 10px -10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-btn {
+    background-color: #fcae47;
+    color: #1e2b40;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.faq-btn:hover {
+    transform: scale(1.02);
+    background-color: #ffbd66;
+}
+
+.chat-bubble {
+    padding: 12px 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    position: relative;
+}
+
+.user-bubble {
+    background-color: #fcae47;
+    color: #1e2b40;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+.bot-response-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.bot-avatar-small {
+    font-size: 1.8rem;
+    min-width: 35px;
+}
+
+.bot-avatar-small img {
+    height: 35px;
+}
+
+.bot-bubble {
+    background-color: #1e2b40;
+    color: #ffffff;
+    border-radius: 0 15px 15px 15px;
+    padding-left: 30px;
+}
+
+.chatbot-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #f9a848;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.footer-btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 70%;
+    text-align: center;
+}
+
+.main-btn {
+    background-color: #1e2b40;
+    color: #ffffff;
+}
+
+.back-btn {
+    background-color: #1e2b40;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bot-mascot {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 70px;
+    height: 70px;
+    background-color: #fcebd0;
+    border-radius: 50%;
+    border: 3px solid #6d4c41;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.bot-mascot img {
+    width: 60%;
+    height: auto;
+}
+
+@media screen and (max-width: 500px) {
+    .chatbot-widget-container {
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+        align-items: flex-end;
+        width: auto;
+    }
+
+    #chat-launcher-btn {
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+
+    .chatbot-card {
+        width: 100% !important;
+        height: 80vh;
+        border-radius: 20px 20px 0 0;
+        transform: translateY(100%);
+    }
+
+    @keyframes popUp {
+        from {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .faq-btn,
+    .footer-btn {
+        padding: 15px;
+    }
+}
+
+/* =========================================
+   6. RESPONSIVE (สำหรับส่วนที่เหลือ)
+   ========================================= */
+
+@media (max-width: 950px) {
+
+    /* Responsive เนื้อหา Hero และอื่นๆ */
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .feature-label {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
+
+    .feature-label i {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Responsive Slider */
+    .slide-item {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .slide-item img {
+        height: 250px;
+    }
+
+    .slide-item-full img {
+        width: 80%;
+        height: auto;
+        border-radius: 15px;
+    }
+
+    /* Responsive News & Hero Bottom */
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-divider::before {
+        width: 60%;
+    }
+
+    .hero-bottom-grid {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .feature-box {
+        height: 200px;
+    }
 }
