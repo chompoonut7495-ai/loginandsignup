@@ -1,0 +1,316 @@
+/* รีเซ็ตค่าเริ่มต้น */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pathway Extreme', sans-serif;
+    background-color: #333;
+    /* พื้นหลังสมมติเพื่อให้เห็น Header ชัดๆ */
+}
+/* =========================================
+   Academics Section
+   ========================================= */
+.academics-section {
+    width: 100%;
+    margin-top: 80px;
+}
+
+/* แถบหัวข้อสีน้ำเงินเข้ม */
+.academics-header {
+    background-color: #1e2b40;
+    color: #ffffff;
+    text-align: center;
+    padding: 45px;
+}
+
+.academics-header h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* พื้นหลังส่วนเนื้อหา */
+.academics-container {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* การ์ดข้อมูล */
+.program-card {
+    background-color: #e6e6e6; /* สีเทาอ่อนแบบในรูป */
+    width: 100%;
+    max-width: 900px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* หัวการ์ดสีส้ม */
+.card-top-bar {
+    background-color: #f9a848;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+.card-top-bar h3 {
+    margin: 0;
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* จุดวงกลมตกแต่งซ้ายบน */
+.mac-dots {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    display: flex;
+    gap: 6px;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff; /* สีสำรอง */
+}
+.dot.red { background-color: #ff5f56; }
+.dot.yellow { background-color: #ffbd2e; }
+
+/* เนื้อหาในส่วนการ์ด */
+.card-body {
+    padding: 30px;
+    color: #333;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+.program-img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+    display: block;
+}
+
+/* =========================================
+   ปุ่ม Accordion (หลักสูตรต่อเนื่อง)
+   ========================================= */
+.accordion-wrapper {
+    background-color: #1e2b40; /* สีกรมท่า */
+    border-radius: 12px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.accordion-btn {
+    background-color: #1e2b40;
+    color: #ffffff;
+    width: 100%;
+    padding: 15px 25px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.accordion-btn:hover {
+    background-color: #2a3d5c;
+}
+
+.fa-regular.fa-file{
+    color:white;
+}
+
+.btn-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #f9a848; /* ไอคอน/ข้อความสีส้ม */
+}
+.btn-left span {
+    color: #ffffff;
+}
+
+/* วงกลมลูกศรสีส้ม */
+.btn-right {
+    background-color: #f9a848;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease; /* อนิเมชั่นหมุนลูกศร */
+    box-shadow: 0 0 10px rgba(249, 168, 72, 0.4); /* เงาเรืองแสง */
+}
+
+/* สร้างลูกศรด้วย CSS */
+.arrow-down {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 4px;
+    transform: rotate(45deg);
+    margin-bottom: 3px;
+}
+
+/* เมื่อปุ่มถูกกดให้หมุนลูกศรขึ้น */
+.accordion-btn.active .btn-right {
+    transform: rotate(180deg);
+}
+
+/* กล่องเนื้อหาที่ซ่อนอยู่ */
+.accordion-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out; /* อนิเมชั่นตอนสไลด์ลง */
+}
+
+/* ดีไซน์ของเนื้อหาด้านในกล่อง */
+.panel-content {
+    border-top: 2px solid #f9a848; /* เส้นคั่นสีส้มแบบในรูป */
+    padding: 30px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+.panel-content h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+.panel-content h2 {
+    margin: 10px 0;
+    font-size: 2rem;
+    color: #ffffff;
+}
+.panel-content p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   Curriculum Section (ส่วนแสดงแผนการเรียนรูปภาพ)
+   ========================================= */
+
+.curriculum-section {
+    width: 100%;
+    background-color: #e0e0e0; 
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px; 
+}
+
+.curriculum-wrapper {
+    width: 100%;
+    max-width: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* 🌟 สไตล์กล่องหัวข้อแบบใหม่ */
+.curriculum-tab {
+    background-color: #ffffff;
+    border: 3px solid #1e2b40; /* ขอบสีกรมท่าเข้ม */
+    border-radius: 12px; /* ขอบมนพอดีๆ */
+    padding: 15px 30px;
+    padding-bottom: 35px; /* ดันข้อความขึ้น เผื่อที่ว่างด้านล่างให้ขีดสีส้ม */
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    max-width: 90%; /* ป้องกันกล่องล้นขอบจอ */
+}
+
+.curriculum-tab h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.6;
+    text-align: left; /* ให้ข้อความชิดซ้ายเสมอ */
+}
+
+/* 🌟 ลายเส้นปะสีส้ม มุมขวาล่างภายในกล่อง */
+.curriculum-tab::after {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    right: 20px;
+    width: 120px; /* ความยาวของเส้น */
+    height: 6px;  /* ความหนาของเส้น */
+    background: repeating-linear-gradient(
+        to right,
+        #F9A848 0,
+        #F9A848 20px,
+        transparent 20px,
+        transparent 25px
+    );
+}
+
+/* จัดกล่องให้ชิดซ้าย-ขวา */
+.align-left {
+    align-self: flex-start;
+}
+
+.align-right {
+    align-self: flex-end;
+}
+
+/* เฟรมพื้นหลังสำหรับรูป */
+.curriculum-frame {
+    background-image: url('../IoT/img/stripe.JPG'); 
+    width: 100%;
+    padding: 50px;
+    border-radius: 12px; 
+}
+
+.curriculum-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================
+   Responsive (สำหรับหน้าจอมือถือ)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    /* Academics & Accordion Mobile */
+    .card-body {
+        padding: 15px;
+    }
+    .accordion-btn {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    /* Curriculum Mobile */
+    .curriculum-section {
+        padding: 50px 15px;
+        gap: 50px;
+    }
+    
+    .curriculum-tab {
+        align-self: center; /* ในมือถือให้กล่องอยู่ตรงกลางทั้งหมด */
+        max-width: 100%;
+        padding: 15px 20px;
+        padding-bottom: 30px;
+    }
+
+    .curriculum-tab h3 {
+        font-size: 1rem;
+    }
+
+    .curriculum-frame {
+        padding: 20px;
+    }
+}

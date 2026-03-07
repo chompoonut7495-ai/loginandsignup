@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: auto; */
+}
+
+body {
+    font-family: 'Pathway Extreme', sans-serif;
+    margin-top: 80px;
+}
+
+/* =========================================
+   FACULTY PROFILE GRID (ส่วนแสดงผลบุคลากร)
+   ========================================= */
+
+.faculty-section {
+    padding: 50px;
+    /* ปรับลดลงนิดหน่อยเพราะไม่มี Header บังแล้ว */
+    background-color: #f9f9f9;
+    /* พื้นหลังรวมสีเทาอ่อนๆ */
+}
+
+/* --- The Grid System --- */
+.profile-grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* สั่งให้ตกบรรทัดถ้าที่เต็ม */
+    justify-content: center;
+    /* จัดกึ่งกลาง */
+    gap: 50px;
+    /* ระยะห่าง */
+    padding: 20px 0;
+}
+
+/* --- กำหนดขนาดการ์ด --- */
+.profile-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    /* เมาส์เป็นรูปมือ */
+}
+
+/* ลูกเล่นตอนเอาเมาส์ชี้ */
+.profile-card:hover {
+    transform: translateY(-10px);
+    /* ลอยขึ้นนิดนึง */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* --- ส่วนรูปภาพ --- */
+.card-image {
+    margin-top: 20px;
+    width: 135px;
+    height: 150px;
+    border-radius: 50%;
+    /* ทำเป็นวงกลม */
+    overflow: hidden;
+    border: 5px solid #fff;
+    /* ขอบขาวรอบรูป */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* เงาใต้รูป */
+}
+
+.card-image img {
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    /* บังคับรูปให้เต็มวงกลมโดยไม่เบี้ยว */
+}
+
+/* --- เนื้อหาชื่อ --- */
+.card-content {
+    padding: 15px;
+    flex-grow: 1;
+    /* ดันส่วนนี้ให้ยืดเต็มพื้นที่ เพื่อกดปุ่ม Role ลงล่างสุด */
+}
+
+.thai-name {
+    font-size: 18px;
+    /* ปรับขนาดให้อ่านง่ายขึ้นเล็กน้อย */
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+/* เส้นขีดส้ม */
+.divider-line {
+    width: 150px;
+    /* ความยาวเส้น */
+    height: 4px;
+    /* ความหนาเส้น */
+    background-color: #ff9800;
+    /* สีส้ม */
+    margin: 0 auto 15px auto;
+    /* จัดกึ่งกลาง */
+    border-radius: 2px;
+}
+
+.eng-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* --- แถบตำแหน่ง (ด้านล่างสุด) --- */
+.card-role {
+    width: 100%;
+    height: 60px;
+    background-color: #e0e0e0;
+    /* สีเทาพื้นหลัง */
+    color: #5d4037;
+    /* สีตัวหนังสือ */
+    font-weight: 700;
+    font-size: 15px;
+    padding: 10px 0;
+    margin-top: auto;
+    /* ดันตัวเองลงล่างสุดเสมอ */
+    display: flex;
+    /* เพิ่ม flex เพื่อจัดข้อความกลางกล่อง */
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================================
+   MODAL POPUP STYLES (หน้าต่างเด้ง)
+   ========================================= */
+
+/* พื้นหลังมืดๆ (Overlay) */
+.modal {
+    display: none;
+    /* ซ่อนไว้ก่อน */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* สีดำโปร่งแสง */
+    backdrop-filter: blur(5px);
+    /* เบลอฉากหลัง */
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* ตัวกล่อง Popup */
+.modal-content {
+    background-color: #fff;
+    width: 90%;
+    max-width: 600px;
+    /* ความกว้างสูงสุด */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    padding: 30px;
+    animation: slideUp 0.4s ease forwards;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ปุ่มปิด (X) */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* การจัดวางเนื้อหาข้างใน */
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.modal-img-wrapper {
+    width: 135px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #F9A848;
+    margin-bottom: 15px;
+}
+
+.modal-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-info h2 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.role-text {
+    color: #F9A848;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.modal-line {
+    width: 50px;
+    height: 3px;
+    background-color: #ddd;
+    border: none;
+    margin: 0 auto 20px auto;
+}
+
+.desc-text {
+    color: #555;
+    line-height: 1.6;
+    text-align: left;
+    /* จัดชิดซ้ายให้อ่านง่าย */
+    width: 100%;
+    font-size: 15px;
+}
+
+/* =========================================
+   RESPONSIVE (เฉพาะส่วน Faculty)
+   ========================================= */
+@media (max-width: 768px) {
+    .faculty-section {
+        padding: 30px 10px;
+    }
+
+    .profile-card {
+        width: 100%;
+        /* มือถือให้เต็มจอ */
+        max-width: 350px;
+    }
+}

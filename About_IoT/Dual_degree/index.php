@@ -1,0 +1,210 @@
+<?php session_start(); ?>
+
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ioTE Header</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../Original/Original.css">
+
+</head>
+
+<body>
+    <header class="navbar" id="main-nav">
+        <div class="logo">
+            <img src="../../Original/IoTeKMITL.png" alt="iGTE Logo">
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="menu-container">
+            <ul class="nav-links">
+                <li><a href="../../index.php">Home</a></li>
+                <li><a href="../IoT/index.php" style="color:aliceblue">About IoT</a></li>
+
+                <li class="dropdown">
+                    <a href="../../Academics/index.php">Academics <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../../Academics/IoT/index.php">IoT System and information</a></li>
+                        <li><a href="../../Academics/ComIoT/index.php">Computer Engineering & IoT</a></li>
+                        <li><a href="../../Academics/Gened1/index.php">Gened</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../../Admission/index.php">Admission</a></li>
+                <li><a href="../../Contact/index.php">Contact</a></li>
+                <li><a href="../../Faculty/index.php">Faculty</a></li>
+
+                <li class="dropdown dropdown-right">
+                    <a href="../../Performance/index.php">Performance <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../../Performance/DCL/index.php">Definition of Cybersecurity Laboratory</a></li>
+                        <li><a href="../../Performance/CLR/index.php">Cybersecurity Laboratory Researcher</a></li>
+                    </ul>
+                </li>
+                <!-- Login Button -->
+                <li class="login-box">
+
+                <?php if(isset($_SESSION['email'])): ?>
+                    <a href="../../loginandsignup/logout.php" class="login-btn">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Logout</span>
+                    </a>
+                <?php else: ?>
+                    <a href="../../loginandsignup/login.php" class="login-btn">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        <span>Login</span>
+                    </a>
+                <?php endif; ?>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="full-width-nav">
+        <div class="nav-button-container">
+            <a href="../IoT/index.php" class="nav-btn btn-inactive" style="text-decoration: none;">ABOUT IoT System and
+                Information</a>
+            <a href="index.php" class="nav-btn btn-active" style="text-decoration: none;">ABOUT Dual Degree</a>
+        </div>
+    </div>
+
+    <section class="top-announcement">
+        <p>
+            ครั้งแรกของประเทศไทยโครงการหลักสูตรปริญญาตรีสองปริญญา (Dual Degree)
+            ระหว่างคณะวิศวกรรมศาสตร์และคณะวิทยาศาสตร์สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง วศ.บ.
+            วิศวกรรมระบบไอโอทีและสารสนเทศ และวท.บ. ฟิสิกส์อุตสาหกรรม
+        </p>
+    </section>
+
+    <!-- กล่องtitleสีส้ม -->
+    <section class="dual-section">
+
+        <!-- Title -->
+        <div class="dual-title">
+            Dual Degree (B.Eng. IoT System and Information + B.Sc. Industrial Physics)
+        </div>
+
+        <!-- กล่องน้ำเงินบทความ -->
+        <div class="dual-dark">
+            ในยุค Disruption ที่โลกเปลี่ยนแปลงอย่างรวดเร็ว ความรู้เพียงศาสตร์เดียวอาจไม่เพียงพอ
+            โดยเฉพาะทักษะด้านดิจิทัลและเทคโนโลยีที่มีความสำคัญต่อโลกไร้พรมแดน
+            หลักสูตร “PhysIoT” จึงถูกพัฒนาขึ้นเพื่อสร้างบัณฑิตที่มีความรู้รอบด้านทั้งวิทยาศาสตร์และวิศวกรรมศาสตร์
+            สามารถบูรณาการองค์ความรู้เพื่อสร้างนวัตกรรม ขับเคลื่อนประเทศ
+            และตอบโจทย์อุตสาหกรรมยุค Thailand 4.0 รวมถึงอุตสาหกรรม New S-Curve และอุตสาหกรรมแห่งอนาคต
+        </div>
+
+        <!-- กล่องส้ม + 3 ไอคอน -->
+        <div class="dual-highlight">
+
+            <div class="item">
+                <div class="icon-circle">
+                    <img src="img/1.png" alt="icon">
+                </div>
+                <h3>เรียน 4 ปี ได้ 2 ปริญญา</h3>
+                <p>วศ.บ.วิศวกรรมระบบไอโอทีและสารสนเทศ + วท.บ. ฟิสิกส์อุตสาหกรรม</p>
+            </div>
+
+            <div class="item">
+                <div class="icon-circle">
+                    <img src="img/2.png" alt="icon">
+                </div>
+                <h3>ทลายกำแพงระหว่างคณะ</h3>
+                <p>ศึกษาและปฏิบัติด้านอิเล็กทรอนิกส์อัจฉริยะและสมาร์ทเซ็นเซอร์การออกแบบและควบคุมอุปกรณ์สมาร์ทดีไวซ์โดยใช้พื้นฐานด้านวงจรไฟฟ้า
+                    อิเล็กทรอนิกส์ ระบบดิจิทัล และระบบสมองกลฝังตัว</p>
+            </div>
+
+            <div class="item">
+                <div class="icon-circle">
+                    <img src="img/3.png" alt="icon">
+                </div>
+                <h3>จบแล้วฮอตสุดไม่มีตกยุค</h3>
+                <p>หากได้ลองค้นหาคำว่า “Top 10 อาชีพไม่ตกงาน” แน่นอนว่าจะต้องเจอกับอาชีพด้านไอทีอย่างแน่นอน
+                    เพราะเป็นสายงานที่มีความหลากหลายมาก
+                    ในยุคดิจิทัลไทยแลนด์ 4.0 นี้ อุตสาหกรรมดิจิทัลที่รัฐบาลให้การสนับสนุน
+                    และมีความต้องการบัณฑิตในสาขานี้เป็นอย่างมาก</p>
+            </div>
+
+        </div>
+
+        <!-- why dual -->
+        <div class="why-wrapper">
+
+            <div class="why-title">
+                WHY Dual Degree?
+            </div>
+
+            <div class="why-dark">
+                หลักสูตรฟิสิกส์อุตสาหกรรมของ สจล. มุ่งพัฒนาความรู้และทักษะทางฟิสิกส์เพื่อนำไปประยุกต์ในอุตสาหกรรมต่างๆ
+                โดยร่วมมือกับหน่วยงานอุตสาหกรรมชั้นนำของประเทศ
+                การเรียนการสอนเน้นเทคโนโลยีที่ตอบสนองความต้องการของอุตสาหกรรม
+                เช่น การตรวจสอบชิ้นงานด้วยภาพถ่ายอัตโนมัติ การโปรแกรมไพธอน การออกแบบระบบไอโอที และฟาร์มอัจฉริยะ
+                นักศึกษาปีที่ 2 สามารถเลือกเรียน 2 ปริญญาร่วมกับหลักสูตรวิศวกรรมระบบไอโอที
+                เมื่อจบการศึกษาจะได้รับปริญญา วท.บ. ฟิสิกส์อุตสาหกรรม
+                และ วศ.บ. วิศวกรรมระบบไอโอทีและสารสนเทศ
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- img-->
+    <section class="image-section">
+        <img src="img/b.jpg" alt="">
+        <img src="img/c.JPG" alt="">
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="logo">
+                    <img src="../../Original/IoTeKMITL.png" alt="IoTE Logo">
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-line"></i></a>
+                </div>
+            </div>
+            <hr class="footer-line">
+            <div class="footer-bottom">
+                <div class="footer-col">
+                    <h3>ABOUT US</h3>
+                    <p><strong>Bachelor of Engineering</strong><br>(IoT System and Information)</p>
+                    <br>
+                    <p><strong>Dual Degree</strong><br>(B.Eng. IoT System + B.Sc. Industrial Physics)</p>
+                </div>
+                <div class="footer-col contact-info">
+                    <h3>CONTACT US</h3>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>ชั้น 12 อาคารเรียนรวม 12 ชั้น เลขที่ 1 ซอยฉลองกรุง 1 <br>แขวงลาดกระบัง เขตลาดกระบัง
+                            กรุงเทพมหานคร 10520</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-regular fa-envelope"></i>
+                        <p>iote@kmitl.ac.th<br>pikulkaew.ta@kmitl.ac.th</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>02-329-8000 ext.5129<br>02-329-8301 ext.235</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../Original/Original.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Prompt', sans-serif;
+}
+
+body{
+    height:100vh;
+    background-color:#F0A84E; /* สีส้มพื้นหลัง */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Container L/R */
+.container{
+    width:1200px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.form-box{
+    display: none;
+}
+
+.form-box.active{
+    display: block;
+}
+
+/* logo */
+.left img{
+    width:400px;
+}
+
+/* right sec */
+.right{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-box{
+    width:400px;
+    background:#d9d9d9;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 8px 15px rgba(0,0,0,0.2);
+}
+
+.login-box h1{
+    text-align:center;
+    font-weight:700;
+    color:#2f3e4a;
+    margin-bottom:30px;
+    position:relative;
+}
+
+.login-box h1::after{
+    content:"";
+    width:80px;
+    height:4px;
+    background:#f4a640;
+    display:block;
+    margin:10px auto 0;
+    border-radius:2px;
+}
+
+/* input */
+.input-group{
+    margin-bottom:25px;
+}
+
+.input-group label{
+    font-weight:600;
+    color:#2f3e4a;
+    display:block;
+    margin-bottom:10px;
+}
+
+.input-group input{
+    width:100%;
+    border:none;
+    border-bottom:3px solid #2f3e4a;
+    background:transparent;
+    padding:8px 0;
+    font-size:20px;
+    outline:none;
+}
+
+/* login btn */
+.login-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    background:#243746;
+    color:#f4a640;
+    font-weight:700;
+    cursor:pointer;
+    margin-top:20px;
+    transition:0.3s;
+}
+
+.login-btn:hover{
+    opacity:0.85;
+}
+
+/* signup link */
+.signup-text{
+    text-align:center;
+    margin-top:15px;
+    font-size:20px;
+}
+
+.signup-text a{
+    color:#243746;
+    font-weight:600;
+    text-decoration:underline;
+}
+
+
+.error-message{
+    padding: 12px;
+    background: #f8d7da;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #a42834;
+    text-align: center;
+    margin-bottom: 20px;
+}

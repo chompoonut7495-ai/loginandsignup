@@ -1,0 +1,191 @@
+<?php session_start(); ?>
+
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ioTE Header</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../GenCourse2/style.css">
+    <link rel="stylesheet" href="../../Original/Original.css">
+
+
+</head>
+
+<body>
+
+    <header class="navbar" id="main-nav">
+        <div class="logo">
+            <img src="../../Original/IoTeKMITL.png" alt="iGTE Logo">
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="menu-container">
+            <ul class="nav-links">
+                <li><a href="../../index.php">Home</a></li>
+                <li><a href="../../About_IoT/IoT/index.php">About IoT</a></li>
+
+                <li class="dropdown">
+                    <a href="../../Academics/index.php" style="color:aliceblue">Academics <span
+                            class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../../Academics/IoT/index.php">IoT System and information</a></li>
+                        <li><a href="../../Academics/ComIoT/index.php">Computer Engineering & IoT</a></li>
+                        <li><a href="../../Academics/Gened1/index.php">Gened</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../../Admission/index.php">Admission</a></li>
+                <li><a href="../../Contact/index.php">Contact</a></li>
+                <li><a href="../../Faculty/index.php">Faculty</a></li>
+
+                <li class="dropdown dropdown-right">
+                    <a href="../../Performance/index.php">Performance <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../../Performance/DCL/index.php">Definition of Cybersecurity Laboratory</a></li>
+                        <li><a href="../../Performance/CLR/index.php">Cybersecurity Laboratory Researcher</a></li>
+                    </ul>
+                </li>
+                <!-- Login Button -->
+                <li class="login-box">
+
+                <?php if(isset($_SESSION['email'])): ?>
+                    <a href="../../loginandsignup/logout.php" class="login-btn">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Logout</span>
+                    </a>
+                <?php else: ?>
+                    <a href="../../loginandsignup/login.php" class="login-btn">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        <span>Login</span>
+                    </a>
+                <?php endif; ?>
+        </nav>
+    </header>
+
+    <!-- Navigation bar-->
+    <nav class="nav-bar">
+        <a href="../Gened1/index.php" class="nav-btn">วิชา GenEd</a>
+        <a href="../GenCourse2/index.php" class="nav-btn">รายวิชาศึกษาทั่วไป</a>
+        <a href="../hyflex3/index.php" class="nav-btn active">Hyflex Learning</a>
+    </nav> 
+
+    <section class="top-section">
+        <div class="top-image">
+            <img src="image/hy.jpg" alt="">
+        </div>
+
+        <div class="top-text">
+
+            <p>
+                วิชาที่คุณเลือกเวลาเรียนได้ ให้อิสระแก่ผู้เรียน ได้เรียนและศึกษาด้วยตนเอง
+            </p>
+            <p>Hyflex Learning : การเรียนรู้แบบยืดหยุ่น การเรียนรู้ทั้งในชั้นเรียนที่มีผู้สอน และศึกษาด้วยตนเอง
+                ผ่านการเรียนรู้ในรูปแบบออน์ไลน์ การเรียนกับเพื่อน หรือการทำชิ้นงานโดยผู้เรียนนั้นสามารถเลือกวัน เวลา
+                ในการเรียนตลอดจนวางแผนการเรียนรู้ดังนั้นการเรียนรู้รูปแบบนี้จึงเป็นการเพิ่มโอกาสทางการศึกษาและส่งเสริมให้ผู้เรียนมีทักษะแสวงหาความรู้ด้วยตนเอง
+                ใฝ่รู้และพัฒนาตนเองต่อเนื่องตลอดชีวิต</p>
+        </div>
+    </section>
+
+    <section class="card-section">
+
+        <a href="jp.php" class="card">
+            <img src="image/jp.jpg">
+            <h3>90644069</h3>
+            <h4>ภาษาญี่ปุ่นพื้นฐาน</h4>
+            <p>Foundation Japanese</p>
+
+        </a>
+
+
+        <a href="fun.php" class="card">
+            <img src="image/hyfuncod.jpg">
+            <h3>90642111 / 96642111</h3>
+            <h4>สนุกกับการเขียนโค้ด</h4>
+            <p>Fun with Coding</p>
+        </a>
+
+        <a href="py.php" class="card">
+            <img src="image/hyPython.jpg">
+            <h3>90642211 / 96642211</h3>
+            <h4>เขียนโค้ดด้วยไพทอน</h4>
+            <p>Coding with Pythonh</p>
+        </a>
+
+        <a href="inlove.php" class="card">
+            <img src="image/Hyinlove.jpg">
+            <h3>90642888</h3>
+            <h4>อินเลิฟ อินไลฟ์</h4>
+            <p>In Love & In Life</p>
+        </a>
+
+        <a href="era.php" class="card">
+            <img src="image/Hyera.jpg">
+            <h3>90643888</h3>
+            <h4>การเงินและการลงทุนในยุคดิจิทัล</h4>
+            <p>Digital Era Finance and Investment</p>
+        </a>
+
+        <a href="present.php" class="card">
+            <img src="image/Hypro.jpg">
+            <h3>90644888</h3>
+            <h4>พรีเซ้นต์อย่างไร ให้โดนใจผู้ฟัง</h4>
+            <p>Present Like A Pro</p>
+        </a>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="logo">
+                    <img src="../../Original/IoTeKMITL.png" alt="IoTE Logo">
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-line"></i></a>
+                </div>
+            </div>
+            <hr class="footer-line">
+            <div class="footer-bottom">
+                <div class="footer-col">
+                    <h3>ABOUT US</h3>
+                    <p><strong>Bachelor of Engineering</strong><br>(IoT System and Information)</p>
+                    <br>
+                    <p><strong>Dual Degree</strong><br>(B.Eng. IoT System + B.Sc. Industrial Physics)</p>
+                </div>
+                <div class="footer-col contact-info">
+                    <h3>CONTACT US</h3>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>ชั้น 12 อาคารเรียนรวม 12 ชั้น เลขที่ 1 ซอยฉลองกรุง 1 <br>แขวงลาดกระบัง เขตลาดกระบัง
+                            กรุงเทพมหานคร 10520</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-regular fa-envelope"></i>
+                        <p>iote@kmitl.ac.th<br>pikulkaew.ta@kmitl.ac.th</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>02-329-8000 ext.5129<br>02-329-8301 ext.235</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../General_Education_Course 2/script.js"></script>
+
+</body>
+
+</html>

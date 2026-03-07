@@ -1,0 +1,60 @@
+<?php session_start(); ?>
+
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ioTE KMITL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="news-detail-page">
+        <div class="container">
+            <header class="news-header">
+                <a href="../index.php" class="back-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <h1>Hackathon ปราบซื้อเสียง</h1>
+            </header>
+
+            <div class="main-image-wrapper">
+                <img src="../img/LINE_ALBUM_ประชาสัมพันธ์_260226_3.jpg" alt="Activity Image">
+            </div>
+
+            <article class="content-card">
+                <div class="card-header">
+                    <h3>รายละเอียด</h3>
+                </div>
+                <div class="card-body">
+                    <p>ขอแสดงความยินดีกับนักศึกษาภาควิชาวิศวกรรมไอโอทีและสารสนเทศ คณะวิศวกรรมศาสตร์ สจล.
+                        ที่เข้าร่วมการแข่งขัน “Hackathon ปราบซื้อเสียง” ของ กกต. ณ มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต
+                        และสามารถคว้ารางวัลมาได้สำเร็จรางวัลรองชนะเลิศอันดับที่ 1 รางวัล Popular Vote</p>
+                    <p>สมาชิกทีม DemocraSee</p>
+                    <ul>
+                        <li>นายวีระภัทร แสงอรุณ</li>
+                        <li>นายโกเมศ ประกอบผล</li>
+                        <li>นายพันวินทร์ ชุติกาญจนโรจน์</li>
+                        <li>นายณัฐพัชร์ เจียรยุทธศักดิ์</li>
+                        <li>นายพรเกียรติ รอบคอบ</li>
+                    </ul>
+                    <p>การแข่งขันมุ่งเน้นการนำเสนอ “ไอเดีย วิธีการ และนวัตกรรม” เพื่อร่วมแก้ไขปัญหาการซื้อเสียง
+                        สำหรับประชาชนและ กกต. อย่างสร้างสรรค์และเป็นรูปธรรม</p>
+
+                    ขอชื่นชมความตั้งใจและศักยภาพของนักศึกษาทุกคนที่ร่วมกันสร้างผลงานยอดเยี่ยม<br>
+                    ขอเป็นกำลังใจให้พัฒนาต่อและคว้าความสำเร็จในเวทีต่อไป
+                </div>
+            </article>
+        </div>
+    </div>
+</body>
+
+</html>

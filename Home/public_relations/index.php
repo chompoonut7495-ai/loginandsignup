@@ -1,0 +1,80 @@
+<?php session_start(); ?>
+
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ioTE KMITL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="pr-page-section">
+        <div class="pr-container">
+
+            <div class="pr-header">
+                <a href="../../index.php" class="back-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <h2>ประชาสัมพันธ์</h2>
+                <div class="spacer"></div>
+            </div>
+
+            <div class="pr-grid">
+
+                <div class="pr-card">
+                    <img src="img/LINE_ALBUM_ประชาสัมพันธ์_260226_1.jpg" alt="News 1">
+                    <p>ขอเชิญเข้าร่วมฟังเสวนาวิชาการ "APT (Advanced Persistent Threat) with AI"
+                        พร้อมเปิดมุมมองสู่อาชีพด้าน Cybersecurity จากผู้เชี่ยวชาญและรุ่นพี่สายงานจริง</p>
+                    <a href="new/new1.php">Read More</a>
+                </div>
+
+                <div class="pr-card">
+                    <img src="img/LINE_ALBUM_ประชาสัมพันธ์_260226_2.jpg" alt="News 2">
+                    <p>เวทีแลกเปลี่ยนผลงานวิจัยและความร่วมมือทางวิชาการระหว่างนักศึกษาไทย-ญี่ปุ่น ร่วมกับ Chuo
+                        University เสริมสร้างประสบการณ์ระดับนานาชาติ</p>
+                    <a href="new/new2.php">Read More</a>
+                </div>
+
+                <div class="pr-card">
+                    <img src="img/LINE_ALBUM_ประชาสัมพันธ์_260226_4.jpg" alt="News 3">
+                    <p>ประชาสัมพันธ์การเปิดรับสมัครนักศึกษาปริญญาตรี วิศวกรรม IoT และสารสนเทศ ลาดกระบัง รอบพอร์ต หมดเขต
+                        20 มกราคม 2569</p>
+                    <a href="new/new3.php">Read More</a>
+                </div>
+
+                <div class="pr-card">
+                    <img src="img/LINE_ALBUM_ประชาสัมพันธ์_260226_3.jpg" alt="News 4">
+                    <p>ขอแสดงความยินดีกับนักศึกษาภาควิชาวิศวกรรมระบบไอโอทีและสารสนเทศ
+                        สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง คว้ารางวัลชนะเลิศอันดับ 1</p>
+                    <a href="new/new4.php">Read More</a>
+                </div>
+
+                <div class="pr-card">
+                    <img src="img/LINE_ALBUM_ประชาสัมพันธ์_260226_5.jpg" alt="News 5">
+                    <p>ขอแสดงความยินดีกับนักศึกษาวิศวกรรม IoT และสารสนเทศ สจล.
+                        รับรางวัลนวัตกรรมด้านความมั่นคงปลอดภัยทางไซเบอร์</p>
+                    <a href="new/new5.php">Read More</a>
+                </div>
+
+                <div class="pr-card">
+                    <img src="img/LINE_ALBUM_ประชาสัมพันธ์_260226_6.jpg" alt="News 6">
+                    <p>ขอแสดงความยินดีกับนักศึกษา สจล. คว้ารางวัลชนะเลิศ Network Track ในการแข่งขัน Huawei National ICT
+                        Competition Awards 2025-2026</p>
+                    <a href="new/new6.php">Read More</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
