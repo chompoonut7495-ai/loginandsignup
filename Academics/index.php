@@ -54,6 +54,8 @@
                         <li><a href="../Performance/CLR/index.php">Cybersecurity Lab Researcher</a></li>
                     </ul>
                 </li>
+                <!-- Login Button -->
+                <li class="login-box">
                 <?php if(isset($_SESSION['email'])): ?>
                     <a href="../loginandsignup/logout.php" class="login-btn">
                         <i class="fa-solid fa-right-from-bracket"></i>

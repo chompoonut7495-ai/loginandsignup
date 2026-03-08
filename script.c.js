@@ -40,12 +40,15 @@ function addComment(){
     const newComment = document.createElement("div");
     newComment.className = "comment";
 
+    const now = new Date();
+    const time = now.toLocaleString(); 
+
     newComment.innerHTML = `
         <div class="avatar"></div>
         <div class="comment-content">
             <div class="comment-header">
-                <span class="name">Anonymous 00${commentCount}</span>
-                <span class="time">Just now</span>
+                <span class="name">Anonymous</span>
+                <span class="time">${time}</span>
             </div>
             <p>${text}</p>
         </div>

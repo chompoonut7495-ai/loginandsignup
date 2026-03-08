@@ -185,7 +185,7 @@
         </div>
     </footer>
     <script src="../General_Education_Course 2/script.js"></script>
-
+    <script src="../../Original/Original.js"></script>
 </body>
 
 </html>

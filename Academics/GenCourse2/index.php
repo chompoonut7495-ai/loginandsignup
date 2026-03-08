@@ -68,6 +68,8 @@
                         <span>Login</span>
                     </a>
                 <?php endif; ?>
+            </ul>
+        </nav>
     </header>
 
     <!-- Navigation bar-->
@@ -180,7 +182,7 @@
     </footer>
 
     <script src="script.js"></script>
-
+    <script src="../../Original/Original.js"></script>
 </body>
 
 </html>

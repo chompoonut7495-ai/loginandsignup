@@ -20,3 +20,4 @@ function addComment(){
     input.value = "";
     commentCount++;
 }
+
